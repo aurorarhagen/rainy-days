@@ -1,6 +1,3 @@
-.hero
-{
-    background-image: url("../rainy-days/images/toomas-tartes-Yizrl9N_eDA-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+.hero {
+    background-image: url(/images/toomas-tartes-Yizrl9N_eDA-unsplash.jpg);
 }
