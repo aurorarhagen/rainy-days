@@ -1,3 +1,41 @@
+@font-face {
+    font-family:'Lora', serif;
+    src: url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+}
+@font-face {
+    font-family: 'Istok Web', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+}
+li, h1, h3, .specialtxt {
+    font-family: 'Lora', serif;
+}
+h4, h5, h6, p {
+    font-family: 'Istok Web', sans-serif;
+}
 .hero {
     background-image: url(/images/toomas-tartes-Yizrl9N_eDA-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.footerbox {
+    color: red;
+}
+
+body {
+    background-color: #F2F3F0;
+}
+.navtxt {
+    color: black;
+    text-decoration: none;
+}
+
+.footertxt {
+    color: blue;
+}
+
+.footerlink {
+    text-decoration: none;
+    color: blue;
 }
