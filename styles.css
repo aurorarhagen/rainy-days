@@ -9,7 +9,7 @@
 li, h1, h3, .specialtxt {
     font-family: 'Lora', serif;
 }
-h4, h5, h6, p {
+h4, h5, h6, p, label, legend {
     font-family: 'Istok Web', sans-serif;
 }
 .hero {
@@ -19,8 +19,8 @@ h4, h5, h6, p {
 }
 
 
-.footerbox {
-    color: red;
+footer {
+    background-color: #2F4475; 
 }
 
 body {
@@ -32,10 +32,32 @@ body {
 }
 
 .footertxt {
-    color: blue;
+    color: white;
 }
 
 .footerlink {
     text-decoration: none;
-    color: blue;
+    color: white;
 }
+
+header {
+    background-color: #2F4475;
+}
+
+.hnavtxt {
+    color: white;
+    text-decoration: none;
+}
+
+.form_contact, .form_checkout {
+     display: block;
+}
+.txtmessage {
+    
+}
+
+.contshp {
+    color: black;
+    text-decoration: none;
+}
+

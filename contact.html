@@ -19,17 +19,39 @@
         <nav>
             <a href=index.html><img src="../images/RainyDays_logo_jpg.jpg" alt="Rainy Days logo" width="200"/></a>
             <ul>
-                <li><a class="navtxt" href=listjackets.html><h2>Women</h2></a></li>
-                <li><a class="navtxt" href=listjackets.html><h2>Men</h2></a></li>
-                <li><a class="navtxt" href=about.html><h2>About</h2></a></li>
-                <li><a class="navtxt" href=contact.html><h2>Contact</h2></a></li>
+                <li><a class="hnavtxt" href=listjackets.html><h2>Women</h2></a></li>
+                <li><a class="hnavtxt" href=listjackets.html><h2>Men</h2></a></li>
+                <li><a class="hnavtxt" href=about.html><h2>About</h2></a></li>
+                <li><a class="hnavtxt" href=contact.html><h2>Contact</h2></a></li>
             </ul>
             <img src="../images/icons8-user-24.png" alt="User icon"/>
             <img src="../images/icons8-cart-24.png" alt="Cart icon"/>
         </nav>
     </header>
     <main>
-    <h1>Contact</h1>
+    <h1>Need support?</h1>
+    <p>Our team is available to help you with whatever it may be. Ask us about shipping, 
+     how to care for your garments, or how to return a parcel. 
+     We strive to answer your queries in three days or less, but it might take longer in some periods like around Christmas. </p>
+        <fieldset>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form_contact" required>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" class="form_contact" required>
+            <p>What do you need help with?</p>
+            <select name="topic">
+                <option value="return">I want to return an item</option>
+                <option value="broken">My garment is broken</option>
+                <option value="missing">My parcel is missing</option>
+                <option value="payment">Payment issues</option>
+                <option value="wrong">I recieved the wrong item</option>
+                <option value="other">Other</option>
+            </select>
+            <p>Message</p>
+            <textarea id="message" name="message" class="txtmessage" required></textarea>
+        <input type="submit" value="Send message">
+    </fieldset>
+        
     </main>
     <footer>
         <section class="footerbox">

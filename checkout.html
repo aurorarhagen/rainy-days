@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkout | Rainy Days</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
       </style>
@@ -14,6 +14,55 @@
       <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    
+  <header>
+    <nav>
+        <a href=index.html><img src="../images/RainyDays_logo_jpg.jpg" alt="Rainy Days logo" width="200"/> </a>
+        <ul>
+            <li><a class="hnavtxt" href=listjackets.html><h2>Women</h2></a></li>
+            <li><a class="hnavtxt" href=listjackets.html><h2>Men</h2></a></li>
+            <li><a class="hnavtxt" href=about.html><h2>About</h2></a></li>
+            <li><a class="hnavtxt" href=contact.html><h2>Contact</h2></a></li>
+        </ul>
+        <img src="../images/icons8-user-24.png" alt="User icon"/>
+        <img src="../images/icons8-cart-24.png" alt="Cart icon" />
+    </nav>
+  </header>
+  <main>
+    <h1>Complete checkout</h1>
+    <p><a class="contshp" href=listjackets.html> Not finished yet? Continue shopping</p></a>
+    <fieldset>
+      <legend>Your info:</legend>
+      <label for="fname">First name</label>
+      <input type="text" name="fname" id="fname" class="form_checkout" required>
+      <label for="lname">Last name</label>
+      <input type="text" name="lname" id="lname" class="form_checkout" required>
+      <label for="phone">Phone number</label>
+      <input type="tel" name="phone" id="phone" class="form_checkout" required>
+      <label for="email">Your email address</label>
+      <input type="email" name="email" id="email" class="form_checkout" required>
+      </fieldset>
+      <fieldset>
+      <legend>Shipping info:</legend>
+      <label for="addline1">Address line 1</label>
+      <input type="text" name="addline1" id="addline1" class="form_checkout" required>
+      <label for="addline2">Address line 2</label>
+      <input type="text" name="addline2" id="addline2" class="form_checkout" required>
+      <label for="country">Country</label>
+      <input type="text" name="country" id="country" class="form_checkout" required>
+      <label for="city">City</label>
+      <input type="text" name="city" id="city" class="form_checkout" required>
+      <label for="province">Province</label>
+      <input type="text" name="province" id="province" class="form_checkout" required>
+      <label for="postcode">Post code</label>
+      <input type="number" name="postcode" id="postcode" class="form_checkout" required>
+      </fieldset> 
+     <p>Choose payment method:</p>
+      <input type="checkbox" id="terms" name="terms" value="terms">
+      <label for="terms">I accept the terms and conditions</label> <br>
+      <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+      <label for="newsletter">I want to recieve the newsletter</label> <br>
+  <input type="submit" value="Place order" class="orderbtn">
+</form>
+  </main>
 </body>
 </html>
