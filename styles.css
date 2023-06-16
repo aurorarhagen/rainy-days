@@ -34,9 +34,40 @@ footer {
     background-color: #2F4475; 
 }
 
+
 body {
     background-color: #F2F3F0;
+    margin: 0px;
+    min-height: 100%;
+    min-width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
+
+main, .aboutmain {
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.aboutimg {
+    max-width: 500px;
+    padding-top: 40px;
+}
+
+.aboutmain {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 3fr 0.5fr 0.5fr;
+}
+
+.headerstxt, .aboutsubscribe, .subscribefield { 
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 20px;
+    width: 80%;
+}
+
 .navtxt {
     color: black;
     text-decoration: none;
@@ -80,11 +111,6 @@ ul {
     padding: 0px;
 }
 
-.abouttxt {
-    text-align: center;
-    padding-left: 200px;
-    padding-right: 200px;
-}
 
 .iconsnav {
     margin-left: 1.5em;
@@ -99,3 +125,10 @@ ul {
 .inspiration {
     display: inline;
 }
+
+.supportform {
+    max-width: 600px;
+    align-items: center;
+    margin: 0 auto;
+}
+
