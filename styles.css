@@ -2,13 +2,40 @@
 
 
 @font-face {
-    font-family:'Lora', serif;
+    font-family:'Lora', Georgia, 'Times New Roman', Times, serif;
     src: url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 }
 @font-face {
     font-family: 'Istok Web', sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
 }
+
+nav, #nav-box {
+    display: none;
+}
+
+#nav-box:checked ~ nav {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    nav {
+        display: inline;
+    }
+    .hamburger-nav{
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    
+    .hnavtxt{
+        display: block;
+    }
+
+}
+
 .menu{
     margin: 0;
     padding: 8px;
@@ -27,6 +54,9 @@ h4, h5, h6, p, label, legend, .subscribefield {
     font-family: 'Istok Web', sans-serif;
 }
 
+h6 {
+    font-size: 1rem;
+}
 footer {
     background-color: #2F4475; 
     display: grid;
@@ -97,6 +127,8 @@ main, .aboutmain {
     border-spacing: 10px;
 }
 
+/**About page **/
+
 .aboutimg {
     max-width: 100%
 }
@@ -114,25 +146,9 @@ main, .aboutmain {
     border-color: #2F4475;
     padding: 20px;
 }
-/**About page
 
 
 
-.about-grids {
-    display: flex;
-}
-
-@media (min-width:600px) {
-    .about-grids {
-        flex-direction: row;
-    }
-}
-@media (max-width:600px) {
-    .about-grids {
-   flex-direction: column;
-    }
-}
-**/
 .headerstxt, .aboutsubscribe { 
     text-align: center;
     padding-left: 40px;
@@ -253,4 +269,19 @@ ul {
     .jacket-pic {
         max-width: 600px;
     }
+   }
+
+   .add-to-cart-button {
+    padding: 20px;
+   }
+
+   .add-to-cart {
+    margin-top: 20px;
+   }
+
+   /** Checkout complete **/
+
+   .checkout-image
+   {
+    width: 100%;
    }
