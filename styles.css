@@ -32,6 +32,8 @@ h4, h5, h6, p, label, legend {
 
 footer {
     background-color: #2F4475; 
+    display: grid;
+    grid-template-columns: repeat(3,1fr)
 }
 
 
@@ -150,8 +152,6 @@ ul {
     padding-top: 20px;
 }
 
-
-
 .sortby {
     display: grid;
     grid-auto-flow: column;
@@ -159,3 +159,31 @@ ul {
     padding-top: 20px;
     max-height: auto;
 }
+
+/**Jacket page**/
+
+.jacket-page {
+    display: flex;
+}
+
+@media (max-width:600px) {
+    .jacket-page {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+    .jacket-pic {
+        max-width: 450px;
+        
+    }
+}
+
+@media (min-width:600px) {
+    .jacket-page {
+        grid-gap: 15px;
+        padding-top: 20px;
+    }
+    .jacket-pic {
+        max-width: 600px;
+    }
+   }
