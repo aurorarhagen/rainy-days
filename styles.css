@@ -104,11 +104,16 @@ main, .aboutmain {
 .about-grids div{
     padding-top: 30px;
 }
-.subscribefield {
-    max-width: 400px;
 
+.subscribefield {
+    text-align: center;
 }
 
+.subscribe {
+    border: solid;
+    border-color: #2F4475;
+    padding: 20px;
+}
 /**About page
 
 
