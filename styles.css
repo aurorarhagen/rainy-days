@@ -1,3 +1,6 @@
+/**Global styles**/
+
+
 @font-face {
     font-family:'Lora', serif;
     src: url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
@@ -20,14 +23,8 @@ li, h1, h3, h2, .specialtxt {
     font-family: 'Lora', serif;
 }
 
-h4, h5, h6, p, label, legend {
+h4, h5, h6, p, label, legend, .subscribefield {
     font-family: 'Istok Web', sans-serif;
-}
-
-.hero {
-    background-image: url(/images/toomas-tartes-Yizrl9N_eDA-unsplash.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 footer {
@@ -52,18 +49,86 @@ main, .aboutmain {
     padding-bottom: 20px;
 }
 
+/** Index page**/
+
+.hero img {
+    max-width: 100%;
+}
+
+.jacket-cards {
+    display: flex;
+    border: solid;
+    border-color: #2F4475;
+}
+
+.jacket-cards button {
+    max-height: 50px;
+}
+
+@media (min-width:600px) {
+    .jacket-cards {
+        grid-template-rows: repeat (1,fr);
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:600px) {
+    .jacket-cards {
+        flex-direction: column;
+        text-align: center;
+    }
+    .jacket-cards div img {
+        min-width: 100%;
+        max-height: 450px;
+    }
+}
+
+.jacket-cards div {
+    display: inline;
+}
+
+.inspiration div {
+    display: inline-block;
+    padding-inline: 20px;
+    padding: 10px;
+}
+
+.inspiration div img {
+    border-spacing: 10px;
+}
+
 .aboutimg {
-    max-width: 500px;
-    padding-top: 40px;
+    max-width: 100%
 }
 
-.aboutmain {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 3fr 0.5fr 0.5fr;
+.about-grids div{
+    padding-top: 30px;
+}
+.subscribefield {
+    max-width: 400px;
+
 }
 
-.headerstxt, .aboutsubscribe, .subscribefield { 
+/**About page
+
+
+
+.about-grids {
+    display: flex;
+}
+
+@media (min-width:600px) {
+    .about-grids {
+        flex-direction: row;
+    }
+}
+@media (max-width:600px) {
+    .about-grids {
+   flex-direction: column;
+    }
+}
+**/
+.headerstxt, .aboutsubscribe { 
     text-align: center;
     padding-left: 40px;
     padding-right: 20px;
@@ -100,9 +165,6 @@ header {
      display: block;
 }
 
-.txtmessage {
-    
-}
 
 .contshp {
     color: black;
@@ -121,8 +183,9 @@ ul {
     margin-top: 5em;
 }
 
-.instapic {
+.instapic, .inspiration h3{
     text-align: center;
+    padding-top: 50px;
 }
 
 .inspiration {
@@ -174,7 +237,6 @@ ul {
     }
     .jacket-pic {
         max-width: 450px;
-        
     }
 }
 
