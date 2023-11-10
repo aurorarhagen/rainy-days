@@ -29,7 +29,7 @@ async function renderJackets() {
         allProducts.append(card);
     });
 }
-//IKKE RØR//
+
 function createCard(element) {
     const divElement = document.createElement('div');
     const h3Element = document.createElement('h3');
@@ -51,5 +51,5 @@ function createCard(element) {
 
 renderJackets()
 
-
+//IKKE RØR//
 //allProducts.innerHTML += `<a href="./jacket.html?id=${element.id}">${JSON.stringify(element)}`;
