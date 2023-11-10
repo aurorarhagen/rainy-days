@@ -1,34 +1,55 @@
-const host = "https://api.noroff.dev";
-const endpoint ="/api/v1/rainy-days";
-const apiUrl = host + endpoint;
-
-export async function getlistJackets() {
-    const response = await fetch(apiUrl);
-    const listJackets = await response.json();
-    return listJackets;
-}
-
-export function renderJacket(jacketData) {
-    const jacketElement = document.createElement("div");
-    jacketElement.innerText = jacketData.title;
-    
-
-    const img = document.createElement("img");
-    img.src= jacketData.image;
-    img.alt = jacketData.title;
-
-    jacketElement.append(img);
-    
-}
-
-export function renderlistJackets(listAllJackets) {
-    listAllJackets.forEach(renderJacket)
-}
-
-
+//IKKE RØR//
 export async function listJacketsPage() {
-    const listJackets = await getlistJackets();    
-    renderlistJackets(listJackets);
-    
     alert ("Page for many jackets")
 }
+
+const URL ='https://api.noroff.dev/api/v1/rainy-days';
+
+const testing_function = async(url) => {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            
+            return data;
+        }   else {
+            throw new Error("Could not load products. Please try again later.");
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+async function renderJackets() {
+    const jacketsData = await testing_function(URL);
+    const allProducts = document.querySelector("#all-products");
+    allProducts.innerHTML = ''
+
+    jacketsData.forEach(element => {
+        const card = createCard(element);
+        allProducts.append(card);
+    });
+}
+//IKKE RØR//
+function createCard(element) {
+    const divElement = document.createElement('div');
+    const h3Element = document.createElement('h3');
+    const h4Element = document.createElement('h4');
+    const imageElement = document.createElement('img');
+    imageElement.src = element.image;
+    divElement.classList.add('card');
+    divElement.id = element.id;
+    divElement.addEventListener('click', ()=> {
+        window.location.href = `./jacket.html?id=${element.id}`
+    })
+    h3Element.textContent = element.title; 
+    h4Element.textContent = element.price;
+    divElement.append(imageElement,h3Element,h4Element)
+    return divElement;
+}
+
+
+
+renderJackets()
+
+
+//allProducts.innerHTML += `<a href="./jacket.html?id=${element.id}">${JSON.stringify(element)}`;
