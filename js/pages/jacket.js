@@ -1,9 +1,5 @@
-export async function jacketPage() {
-    alert ("Page for one jacket")
-}
-
+export async function jacketPage() {}
 const url = document.location; 
-console.log({url})
 
 const search =url.search;
 
@@ -22,14 +18,13 @@ async function fetchJacket(id) {
             throw new Error('Unable to connect to network'); 
          }
     }   catch (error) {
-        console.log(error)
+       
     }
 }
 
 async function renderJacket() {
     const id = parameter.get('id');
     const jacketData = await fetchJacket(id);
-    console.log((jacketData))
     const singleJacketContent = document.getElementById("single-jacket-content");
     singleJacketContent.innerHTML = `
                                         <img src=${jacketData.image}></img>
@@ -51,5 +46,6 @@ async function renderJacket() {
                                         </a>
                                     `
 }
+
 
 renderJacket();
