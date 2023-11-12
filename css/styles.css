@@ -225,6 +225,8 @@ ul {
     display: grid;
     grid-template-columns: repeat(3,minmax(0, 1fr));
     grid-gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #all-products img {
@@ -248,38 +250,40 @@ ul {
 /**Jacket page**/
 
 #single-jacket-content {
-    display: flex;
+    display: grid;
+    grid-gap: 15px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-@media (max-width:600px) {
+@media (max-width:1000px) {
     #single-jacket-content {
-        flex-direction: column;
         padding-top: 20px;
-        text-align: center;
     }
-    .jacket-pic {
-        max-width: 450px;
-    }
+   
 }
-
-@media (min-width:600px) {
-    #single-jacket-content {
-        grid-gap: 15px;
-        padding-top: 20px;
-    }
-    .jacket-pic {
-        max-width: 600px;
-    }
-   }
+#single-jacket-content a {
+    text-decoration: none;
+    color: black;
+}
 
    .add-to-cart-button {
-    padding: 20px;
+    padding: 10px;
    }
 
    .add-to-cart {
     margin-top: 20px;
    }
 
+   .button-jacket-page {
+    width: 150px;
+    text-decoration: none;
+   }
+  
+   .select-size-jacket-page {
+    width: 150px;
+   }
    /** Checkout complete **/
 
    .checkout-image

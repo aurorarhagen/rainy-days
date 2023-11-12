@@ -1,5 +1,3 @@
-//IKKE RØR//
-
 export async function jacketPage() {
     alert ("Page for one jacket")
 }
@@ -33,9 +31,25 @@ async function renderJacket() {
     const jacketData = await fetchJacket(id);
     console.log((jacketData))
     const singleJacketContent = document.getElementById("single-jacket-content");
-    singleJacketContent.innerHTML = JSON.stringify(jacketData);
+    singleJacketContent.innerHTML = `
+                                        <img src=${jacketData.image}></img>
+                                        <h1>${jacketData.title}</h1>
+                                        <h1>${jacketData.price}$</h1>
+                                        <h3>Colour: ${jacketData.baseColor}</h3>
+                                        <p>${jacketData.description}</p>
+                                        <select name="size" class="select-size-jacket-page">${jacketData.sizes}
+                                        <option>Select size:</option>
+                                        <option>${jacketData.sizes[0]}</option>
+                                        <option>${jacketData.sizes[1]}</option>
+                                        <option>${jacketData.sizes[2]}</option>
+                                        <option>${jacketData.sizes[3]}</option>
+                                        <option>${jacketData.sizes[4]}</option>
+                                        <option>${jacketData.sizes[5]}</option>
+                                        </select>
+                                        <a href="checkout.html">
+                                        <button class="button-jacket-page">Add to cart</buttton>
+                                        </a>
+                                    `
 }
 
 renderJacket();
-
-//IKKE RØR//

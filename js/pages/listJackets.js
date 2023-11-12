@@ -1,7 +1,12 @@
-//IKKE RØR//
 export async function listJacketsPage() {
     alert ("Page for many jackets")
 }
+const url = document.location; 
+console.log({url})
+
+const search = url.search;
+
+const parameter = new URLSearchParams(search); 
 
 const URL ='https://api.noroff.dev/api/v1/rainy-days';
 
@@ -50,6 +55,3 @@ function createCard(element) {
 
 
 renderJackets()
-
-//IKKE RØR//
-//allProducts.innerHTML += `<a href="./jacket.html?id=${element.id}">${JSON.stringify(element)}`;
